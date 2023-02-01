@@ -1,0 +1,131 @@
+.bicicletas-bg {
+  background: var(--cor-11);
+}
+
+#magic {
+  background: linear-gradient(to right, var(--cor-11) 32%, var(--cor-0) 0%);
+  box-sizing: border-box;
+}
+
+.bicicletas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.bicicletas-imagem {
+  position: relative;
+}
+
+.bicicletas-imagem span {
+  background: var(--cor-12);
+  display: inline-block;
+  border-radius: 4px 0 0 4px;
+  padding: 8px 16px 8px 8px;
+  position: absolute;
+  top: 20px;
+  right: -1px;
+}
+
+.bicicletas-conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: start;
+}
+
+.bicicletas h2,
+.bicicletas p {
+  grid-column: 1 / -1;
+}
+
+.bicicletas h2 {
+  margin-bottom: 20px;
+}
+
+.bicicletas h2::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 8px;
+  background-color: var(--cor-p1);
+  margin-bottom: 8px;
+}
+
+.bicicletas p {
+  margin-bottom: 32px;
+}
+
+.bicicletas a {
+  place-self: end;
+}
+
+.bicicletas ul {
+  display: grid;
+  gap: 16px;
+}
+
+.bicicletas li {
+  display: flex;
+  align-items: center;
+}
+
+.bicicletas-conteudo img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+@media (max-width: 800px) {
+  .bicicletas-bg:nth-child(odd) {
+    background-image: none;
+    background-color: var(--cor-11);
+  }
+  .bicicletas {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .bicicletas-conteudo {
+    grid-template-columns: 1fr;
+  }
+  .bicicletas ul {
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 32px;
+  }
+  .bicicletas a {
+    place-self: start;
+  }
+  #magic {
+    background: var(--cor-11);
+  }
+  #magic h2 {
+    color: var(--cor-0);
+  }
+#magic p{
+  color: var(--cor-5);
+}
+#magic ul{
+  color: var(--cor-4);
+}
+}
+
+@media (max-width: 600px) {
+  .bicicletas ul {
+    font-size: 1rem;
+  }
+  #magic {
+    background: var(--cor-11);
+  }
+  #magic h2 {
+    color: var(--cor-0);
+  }
+#magic p{
+  color: var(--cor-5);
+}
+#magic ul{
+  color: var(--cor-4);
+}
+}
